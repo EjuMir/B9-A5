@@ -1,11 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel BD</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/8e91dab357.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl">Travel BD</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-green-100 px-5 border-green-500 text-green-500 border-2">Bus <img
+                            src="B9A5-smart-ticketing-main/images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="my-10">
+            <div class="hero min-h-screen" style="background-image: url(B9A5-smart-ticketing-main/images/banner.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-3xl">
+                        <h1 class="mb-5 text-5xl font-bold">End to End Travel With</h1>
+                        <h1 class="text-green-500 mb-12 text-5xl font-bold">Travel BD</h1>
+                        <p class="mb-14">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                            exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <button class="btn border-none text-black bg-green-500 text-lg font-bold px-5">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-10">
+            <div class="text-center">
+                <div>
+                    <h1 class="font-bold text-2xl my-10">Best Offers For You</h1>
+                </div>
+                <div class="flex justify-center flex-col w-full gap-5 lg:flex-row">
+                    <div class="relative grid h-48 card bg-yellow-500 rounded-box place-items-center p-10">
+                        <div class="flex gap-20 justify-evenly">
+                            <div>
+                                <h1 class="font-bold text-2xl">15% OFF</h1>
+                                <h4 class="font-bold text-sm">on your next purchase</h4>
+                                <h4 class="font-thin text-sm">use by january 2024</h4>
+                            </div>
+                            <img class="absolute h-48 top-14 translate-x-5 -translate-y-14"
+                                src="B9A5-smart-ticketing-main/images/cupon-devider.png" alt="">
+                            <div>
+                                <h1 class="font-bold text-2xl">NEW15</h1>
+                                <h4 class="font-thin text-sm">Coupon Code</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative grid h-48 card bg-pink-400 rounded-box place-items-center p-10">
+                        <div class="flex gap-20 justify-around">
+                            <div>
+                                <h1 class="font-bold text-2xl">20% OFF</h1>
+                                <h4 class="font-bold text-sm">on your next purchase</h4>
+                                <h4 class="font-thin text-sm">use by january 2024</h4>
+                            </div>
+                            <img class="absolute h-48 top-14 translate-x-5 -translate-y-14"
+                                src="B9A5-smart-ticketing-main/images/cupon-devider.png" alt="">
+                            <div>
+                                <h1 class="font-bold text-2xl">COUPLE20</h1>
+                                <h4 class="font-thin text-sm">Coupon Code</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div><button
+                        class="my-8 btn border-solid border-green-500 text-green-500 bg-white text-lg font-bold px-5">See
+                        All Offers</button></div>
+            </div>
+        </section>
+
+        <section class="bg-slate-100 border-t-2 border-green-400 rounded-2xl my-10">
+            <div>
+                <!-- details -->
+                <div class="my-10">
+                    <h1 class="mx-auto text-3xl font-bold mb-10 text-center">Travel BD</h1>
+                    <h3 class="mx-auto text-lg font-medium w-3/4 text-center mb-10">Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Nisi accusantium eveniet doloribus delectus exercitationem facilis
+                        fugit doloremque iure ducimus. Itaque quis dolorum sequi</h3>
+                </div>
+                <div class="flex flex-col w-full gap-10">
+                    <div class="relative mx-auto grid h-auto card w-3/4 bg-white rounded-box">
+                        <div class="flex justify-around items-center bg-white">
+                            <div>
+                                <div class="flex justify-between ml-32 my-10 p-7">
+                                    <div class="flex gap-2">
+                                        <div><img src="B9A5-smart-ticketing-main/images/bus-logo.png" alt=""></div>
+                                        <div>
+                                            <h1 class="text-2xl font-bold">Travel BD</h1>
+                                            <h4>Coach-009-WEB ! AC_Business</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn bg-green-100">
+                                            <div><img src="B9A5-smart-ticketing-main/images/seat-green.png" alt="">
+                                            </div>
+                                            <p class="text-green-500"><span>40</span> seats left</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- routes -->
+                                <div class="bg-gray-100 ml-32 my-10 p-7 rounded-md">
+                                    <div class="flex justify-between align-middle my-3">
+                                        <div>
+                                            <p>Route</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold">Dhaka-Sylhet</p>
+                                        </div>
+                                    </div>
+                                    <hr class="border-dashed font-bold">
+                                    <div class="flex justify-between align-middle my-3">
+                                        <div>
+                                            <p>Departure Time</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold">9:00 P.M</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="flex justify-between gap-3 align-middle mt-6">
+                                        <div class="bg-gray-300 rounded-md">
+                                            <p class="p-2">Boarding Point - Laximpur</p>
+                                        </div>
+                                        <div class="bg-gray-300 rounded-md">
+                                            <p class="p-2">Dropping Point - Bagura</p>
+                                        </div>
+                                        <div class="bg-gray-300 rounded-md">
+                                            <p class="p-2">Est. Time - 11 Hour</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="B9A5-smart-ticketing-main/images/fare.png" alt="">
+                                <h1 class="font-bold text-3xl">550 TK</h1>
+                                <p class="text-gray-300 font-bold">Per Seat</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ticket counter  -->
+                    <div class="grid h-96 card bg-white rounded-box">
+                        <div class="grid grid-cols-2">
+                            <!-- seats -->
+                            <div class="p-5">
+                                <div>
+                                    <h1 class="text-2xl font-bold mb-5">Select Your Seat</h1>
+                                </div>
+
+                                <div class="flex justify-between mb-5">
+                                    <div class="flex"><img src="B9A5-smart-ticketing-main/images/seat-gray.png" alt="">
+                                        <p>Available</p>
+                                    </div>
+                                    <div class="flex"><img src="B9A5-smart-ticketing-main/images/seat-green-filled.png"
+                                            alt="">
+                                        <p>Selected</p>
+                                    </div>
+                                </div>
+                                <!-- seat section -->
+                                <div class="grid grid-cols-4 gap-5">
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A1</div>
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A2</div>
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A3</div>
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A4</div>
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B1</div>
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B2</div>
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B3</div>
+                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B4</div>
+                                </div>
+                            </div>
+                            <!-- accounts -->
+
+                            <div class="p-5">
+                                <div>
+                                    <h1 class="text-2xl font-bold">Select Your Seat</h1>
+                                </div>
+                                <div>
+                                    <div class="overflow-x-auto">
+                                        <table class="table">
+                                            <!-- head -->
+                                            <thead>
+                                                <tr>
+                                                    <th>Seat</th>
+                                                    <th>Class</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- row 1 -->
+                                                <tr>
+                                                    <td>Cy Ganderton</td>
+                                                    <td>Quality Control Specialist</td>
+                                                    <td>Blue</td>
+                                                </tr>
+                                                <!-- row 2 -->
+                                                <tr>
+
+                                                    <td>Hart Hagerty</td>
+                                                    <td>Desktop Support Technician</td>
+                                                    <td>Purple</td>
+                                                </tr>
+                                                <!-- row 3 -->
+                                                <tr>
+
+                                                    <td>Brice Swyre</td>
+                                                    <td>Tax Accountant</td>
+                                                    <td>Red</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
 </body>
+
 </html>
