@@ -21,7 +21,7 @@ for(let i=0; i <= mainSeatIds.length-1; i++){
     document.getElementById(thisSeat).addEventListener('click', function(){
      arr1.push(thisSeat);
       arr1.forEach(element => {
-        if(!unique.includes(element) && (unique.length>=0 && unique.length<=3)){
+        if(!unique.includes(element) && (unique.length>=0 && unique.length<4)){
             unique.push(element);
             setBackgroundColor(element);
             count=count+1;
@@ -30,9 +30,67 @@ for(let i=0; i <= mainSeatIds.length-1; i++){
             ticketRow('seat-name',element);
              total += 550;
              totalPrice();
-            if(unique.length > 3){
-                maximumSeatsWarning('warning');
+             grandTotal('grand-total',total);
+             maximumSeatsWarning('warning');
+
+            if(unique.length === 4)
+            {
+                const button = document.getElementById('apply-button');
+                document.getElementById('input-field').addEventListener('keyup', function(event){
+                const inputFieldText = event.target.value;
+                if(inputFieldText === 'NEW15'){
+                         button.removeAttribute('disabled');
+                         button.addEventListener('click',function(){
+                           let discountPrice = parseInt(total*(15/100));
+                           total -= discountPrice;
+                           grandTotal('grand-total',total);
+                           const div = document.getElementById('append-discount');
+                           const p = document.createElement('p');
+                           p.innerText =`discount (-${discountPrice})`;
+                           div.appendChild(p);
+                           const remove = document.getElementById('remove');
+                           remove.style.display='none';
+                        });       
+                }
+               else if(inputFieldText === 'COUPLE20'){
+                   button.removeAttribute('disabled');
+                   button.addEventListener('click',function(){
+                     let discountPrice = parseInt(total*(20/100));
+                     total -= discountPrice;
+                     grandTotal('grand-total',total);
+                     const div = document.getElementById('append-discount');
+                     const p = document.createElement('p');
+                     p.innerText =`discount (-${discountPrice})`;
+                     div.appendChild(p);
+                     const remove = document.getElementById('remove');
+                     remove.style.display='none';
+               
+                  });       
+               }
+                else 
+                {
+                  
+                   button.setAttribute('disabled',true);
+                  
+                }
+               })
             }
+
+             if(unique.length >= 1){
+             const num = document.getElementById('number').addEventListener('keyup', function(event){  
+                let test = event.target.value;
+                let confirmButton = document.getElementById('confirm');  
+                if(test.length === 11){
+                    confirmButton.removeAttribute('disabled');
+                }
+                else
+                    confirmButton.setAttribute('disabled',true);
+            
+                   
+            
+             });
+            }
+            
         }
        
      });
@@ -41,7 +99,7 @@ for(let i=0; i <= mainSeatIds.length-1; i++){
 function maximumSeatsWarning(id){
     const p = document.getElementById(id);
     const para = document.createElement('p');
-    para.innerText = "*you cannot select anymore seats"
+    para.innerText = `* ${unique.length}/4 seats selected.`;
     p.appendChild(para);
     para.style.color = 'red';
 }
@@ -77,3 +135,12 @@ function totalPrice(){
        totalPrice.innerText = total; 
        
 }
+
+
+
+ function grandTotal(id, value){
+    let grandTotal = document.getElementById(id);
+     grandTotal.innerText = value;
+ }
+
+ 
