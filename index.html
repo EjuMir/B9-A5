@@ -60,8 +60,8 @@
                         <h1 class="text-green-500 mb-12 text-5xl font-bold">Travel BD</h1>
                         <p class="mb-14">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
                             exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button class="btn border-none text-black bg-green-500 text-lg font-bold px-5">Buy
-                            Tickets</button>
+                        <a href="#scroll-down"><button class="btn border-none text-black bg-green-500 text-lg font-bold px-5">Buy
+                            Tickets</button></a>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                                         <button class="btn bg-green-100">
                                             <div><img src="B9A5-smart-ticketing-main/images/seat-green.png" alt="">
                                             </div>
-                                            <p class="text-green-500"><span>40</span> seats left</p>
+                                            <p class="text-green-500"><span id="seat-left">40</span> seats left</p>
                                         </button>
                                     </div>
                                 </div>
@@ -181,12 +181,13 @@
                     </div>
 
                     <!-- ticket counter  -->
-                    <div class="grid h-96 card bg-white rounded-box">
+                    <div id="scroll-down" class="grid h-96 card bg-white rounded-box">
                         <div class="grid grid-cols-2">
                             <!-- seats -->
                             <div class="p-5">
-                                <div>
-                                    <h1 class="text-2xl font-bold mb-5">Select Your Seat</h1>
+                                <div id="warning">
+                                    <h1 class="text-2xl font-bold">Select Your Seat</h1>
+                                    
                                 </div>
 
                                 <div class="flex justify-between mb-5">
@@ -199,15 +200,15 @@
                                     </div>
                                 </div>
                                 <!-- seat section -->
-                                <div class="grid grid-cols-4 gap-5 ml-8">
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A1</div>
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A2</div>
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A3</div>
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A4</div>
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B1</div>
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B2</div>
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B3</div>
-                                    <div class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B4</div>
+                                <div id="main-seat" class="grid grid-cols-4 gap-5 ml-8">
+                                    <div id="A1" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A1</div>
+                                    <div id="A2" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A2</div>
+                                    <div id="A3" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A3</div>
+                                    <div id="A4" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">A4</div>
+                                    <div id="B1" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B1</div>
+                                    <div id="B2" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B2</div>
+                                    <div id="B3" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B3</div>
+                                    <div id="B4" class="w-16 h-8 bg-gray-300 text-center items-center rounded-md">B4</div>
                                 </div>
                             </div>
                             <!-- accounts -->
@@ -222,52 +223,24 @@
                                                 <!-- head -->
                                                 <thead>
                                                     <tr>
-                                                        <th>Seat <span
-                                                                class="bg-green-500 text-white px-3 rounded-md">0</span>
-                                                        </th>
+                                                        <th>Seat <span id="seat-chosen" class="bg-green-500 text-white px-3 rounded-md">0</span></th>
                                                         <th>Class</th>
                                                         <th>Price</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <!-- row 1 -->
-                                                    <tr>
-                                                        <td>Cy Ganderton</td>
-                                                        <td>Quality Control Specialist</td>
-                                                        <td>Blue</td>
-                                                    </tr>
-                                                    <!-- row 2 -->
-                                                    <tr>
-
-                                                        <td>Hart Hagerty</td>
-                                                        <td>Desktop Support Technician</td>
-                                                        <td>Purple</td>
-                                                    </tr>
-                                                    <!-- row 3 -->
-                                                    <tr>
-
-                                                        <td>Brice Swyre</td>
-                                                        <td>Tax Accountant</td>
-                                                        <td>Red</td>
-                                                    </tr>
-                                                    <!-- row 4 -->
-                                                    <tr>
-
-                                                        <td>Brice Swyre</td>
-                                                        <td>Tax Accountant</td>
-                                                        <td>Red</td>
-                                                    </tr>
+                                                <tbody id="seat-name">
+                                            
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="flex justify-around gap-48 my-3">
+                                    <div class="flex justify-around gap-0 my-3">
                                         <div>
                                             <p>Total Price</p>
                                         </div>
                                         <div>
-                                            <p>BDT <span>0</span></p>
+                                            <p>BDT <span id="total-price">0</span></p>
                                         </div>
                                     </div>
                                     <div class="text-center my-6">
@@ -307,9 +280,10 @@
                                 </div>
 
                             </div>
-
+                          <!-- end of account -->
                         </div>
                     </div>
+                    <!-- end of ticket counter -->
                 </div>
             </div>
         </section>
@@ -319,6 +293,10 @@
     <footer>
 
     </footer>
+
+    
+    <script src="utility.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
