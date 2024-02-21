@@ -37,8 +37,10 @@ for(let i=0; i <= mainSeatIds.length-1; i++){
             {
                 const button = document.getElementById('apply-button');
                 document.getElementById('input-field').addEventListener('keyup', function(event){
+                    console.log(event.value);
                 const inputFieldText = event.target.value;
-                if(inputFieldText === 'NEW15'){
+                
+                if(inputFieldText === 'NEW15' && inputFieldText.length === 5){
                          button.removeAttribute('disabled');
                          button.addEventListener('click',function(){
                            let discountPrice = parseInt(total*(15/100));
@@ -52,7 +54,7 @@ for(let i=0; i <= mainSeatIds.length-1; i++){
                            remove.style.display='none';
                         });       
                 }
-               else if(inputFieldText === 'COUPLE20'){
+               else if(inputFieldText === 'COUPLE20' && inputFieldText.length === 8){
                    button.removeAttribute('disabled');
                    button.addEventListener('click',function(){
                      let discountPrice = parseInt(total*(20/100));
@@ -96,6 +98,7 @@ for(let i=0; i <= mainSeatIds.length-1; i++){
      });
     })
 }
+
 function maximumSeatsWarning(id){
     const p = document.getElementById(id);
     const para = document.createElement('p');
