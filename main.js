@@ -135,12 +135,12 @@ function totalPrice(){
        totalPrice.innerText = total; 
        
 }
-
-
-
  function grandTotal(id, value){
     let grandTotal = document.getElementById(id);
      grandTotal.innerText = value;
  }
-
+ function setBackgroundColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-green-500');
+}
  
